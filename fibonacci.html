@@ -1,0 +1,38 @@
+<html>
+generate fibonacci series of nth number
+<head>
+<script>
+function abc()
+{
+
+var n = document.getElementById("text1").value;	
+ function fib_series(n) //recursion function
+	{
+	if(n==0)
+	return n;
+	else if(n==1)
+	return n;
+	else
+	return fib_series(n-1) + fib_series(n-2);
+	}
+document.write("fibonacci series : ");
+for(let i=0; i<=n; i++)
+{
+document.write(" "+fib_series(i));
+}
+}
+</script>
+</head>
+<body>
+<form method="post">
+<br>
+<br>
+<label>Enter any number for fibonacci series :</label>
+<input type="text" id="text1" onchange="abc();">
+</form>
+</body>
+</html>
+
+
+
+

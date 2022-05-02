@@ -1,0 +1,52 @@
+<html>
+<head>
+Determine character with highest occurences in a string
+<SCRIPT>
+function abc()
+{
+
+var str = document.getElementById("text1").value;	
+let l= str.length;	 //calculate length of string
+let count=0;		 //counter variable
+let max=0;		// variable to store maximum value of charcter
+let a=0;		//variable to store charcter with more occurences
+for(let i=0;i<=l;i++)
+	{	
+		count=0;
+		for(let j=0;j<=l;j++)
+		{	
+		if(str[i]==str[j])
+		{
+		 count++;
+		}
+		
+		}
+
+		if(count>max) {
+ 		a=str[i];
+		max=count; }
+	}
+	if(max==1)
+	{ 
+	document.write("Character with highest occurences: no  ");
+	}			
+	else
+	{
+	document.write("Character with highest occurences:   "+a);
+	}		
+}
+</SCRIPT>
+</head>
+<body>
+<form method="post">
+<br>
+<br>
+<label>Enter any string :</label>
+<input type="text" id="text1" onchange="abc();">
+</form>
+</body>
+</html>
+
+
+
+
